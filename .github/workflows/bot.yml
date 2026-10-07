@@ -8,8 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Pobierz kod
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Uruchom Pythona
-        run: python bot.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - run: python bot.py
