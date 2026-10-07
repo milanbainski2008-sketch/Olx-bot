@@ -1,0 +1,15 @@
+name: OLX Bot
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pobierz kod
+        uses: actions/checkout@v4
+
+      - name: Uruchom Pythona
+        run: python bot.py
